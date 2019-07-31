@@ -1,0 +1,49 @@
+{
+  "name": "android-temp-backend",
+  "version": "1.0.0",
+  "description": "A temporary backend service for stroring data from an android app",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf bin && mkdir bin && babel -d ./bin ./src",
+    "start": "node ./bin/app.js",
+    "start:dev": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "babel-node src/models/db/migration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-nach/android-temp-backend.git"
+  },
+  "author": "Iheanacho Victor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victor-nach/android-temp-backend/issues"
+  },
+  "homepage": "https://github.com/victor-nach/android-temp-backend#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "pg": "^7.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0"
+  }
+}
