@@ -10,6 +10,8 @@ const migrate = async () => {
             email VARCHAR(255),
             user_id VARCHAR(255),
             finger_print VARCHAR(255),
+            finger_print_to_send VARCHAR(255),
+            finger_position VARCHAR(255),
             gender VARCHAR(255),
             date_created TIMESTAMP,
             date_moved TIMESTAMP DEFAULT (NOW())

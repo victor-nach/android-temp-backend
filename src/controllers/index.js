@@ -12,10 +12,14 @@ class Controllers {
    */
   static async insertUser(req, res) {
     const {
-      name, address, email, userID, fingerPrint, gender,
+      name, address, email, userID, fingerPrint,
+      fingerPrintToSend, fingerPosition, gender, dateCreated,
     } = req.body;
     try {
-      const result = await DAO.insertUser(name, address, email, userID, fingerPrint, gender);
+      const result = await DAO.insertUser(
+        name, address, email, userID, fingerPrint,
+        fingerPrintToSend, fingerPosition, gender, dateCreated,
+      );
       return res.status(200).json({
         status: 'success',
         data: {
